@@ -1,0 +1,415 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:11:18,559 p=2255 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:11:19,323 p=2255 u=MoralesSantiago n=ansible | PLAY [all] *******************************************************************************************************
+2026-06-24 22:11:19,475 p=2255 u=MoralesSantiago n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2026-06-24 22:11:19,804 p=2255 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:11:21,611 p=2255 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:11:21,612 p=2255 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:11:21,619 p=2255 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ********************************************************************************
+2026-06-24 22:11:21,640 p=2255 u=MoralesSantiago n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key. while parsing a block mapping
+  in "<unicode string>", line 25, column 3
+did not find expected key
+  in "<unicode string>", line 26, column 5
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 26, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: "add NOPASSWD in sudores for group {{ 2PSupervisores }}"
+    become: yes
+    ^ here
+
+2026-06-24 22:15:28,653 p=2378 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:15:28,783 p=2378 u=MoralesSantiago n=ansible | PLAY [all] *******************************************************************************************************
+2026-06-24 22:15:28,791 p=2378 u=MoralesSantiago n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2026-06-24 22:15:28,897 p=2378 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:15:29,914 p=2378 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:15:29,914 p=2378 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:15:29,922 p=2378 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ********************************************************************************
+2026-06-24 22:15:29,944 p=2378 u=MoralesSantiago n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context. mapping values are not allowed in this context
+  in "<unicode string>", line 27, column 15
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 27, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  become: yes
+    lineinfile:
+              ^ here
+
+2026-06-24 22:16:58,086 p=2512 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:16:58,220 p=2512 u=MoralesSantiago n=ansible | PLAY [all] *******************************************************************************************************
+2026-06-24 22:16:58,228 p=2512 u=MoralesSantiago n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2026-06-24 22:16:58,337 p=2512 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:16:59,350 p=2512 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10,
+but future installation of another Python interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:16:59,351 p=2512 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:16:59,358 p=2512 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ********************************************************************************
+2026-06-24 22:16:59,780 p=2512 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 22:16:59,791 p=2512 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] ***************************************************************************************
+2026-06-24 22:16:59,807 p=2512 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 22:16:59,815 p=2512 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ********************************************
+2026-06-24 22:17:00,166 p=2512 u=MoralesSantiago n=ansible | changed: [localhost] => (item=alumno)
+2026-06-24 22:17:00,354 p=2512 u=MoralesSantiago n=ansible | changed: [localhost] => (item=equipo)
+2026-06-24 22:17:00,362 p=2512 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] ***************************************************************
+2026-06-24 22:17:00,452 p=2512 u=MoralesSantiago n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2026-06-24 22:17:00,453 p=2512 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access 'template_01.j2'\nSearched in:\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/template_01.j2\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/template_01.j2\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/templates/template_01.j2\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/template_01.j2\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/templates/template_01.j2\n\t/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/template_01.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2026-06-24 22:17:00,454 p=2512 u=MoralesSantiago n=ansible | PLAY RECAP *******************************************************************************************************
+2026-06-24 22:17:00,455 p=2512 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:17:00,455 p=2512 u=MoralesSantiago n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:35:41,912 p=2819 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:35:42,042 p=2819 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 22:35:42,050 p=2819 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 22:35:42,158 p=2819 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:35:44,195 p=2819 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:35:44,195 p=2819 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:35:44,203 p=2819 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 22:35:44,231 p=2819 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 22:35:44,237 p=2819 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 22:35:44,253 p=2819 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 22:35:44,260 p=2819 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 22:35:44,586 p=2819 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 22:35:44,769 p=2819 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 22:35:44,777 p=2819 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 22:35:45,858 p=2819 u=MoralesSantiago n=ansible | changed: [localhost]
+2026-06-24 22:35:45,865 p=2819 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 22:35:46,221 p=2819 u=MoralesSantiago n=ansible | changed: [localhost]
+2026-06-24 22:35:46,267 p=2819 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group {{ 2PSupervisores }}] ******************************************************
+2026-06-24 22:35:46,283 p=2819 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'PSupervisores'. String: add NOPASSWD in sudores for group {{ 2PSupervisores }}. expected token 'end of print statement', got 'PSupervisores'"}
+2026-06-24 22:35:46,285 p=2819 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 22:35:46,285 p=2819 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:35:46,286 p=2819 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:39:10,294 p=3070 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:39:10,423 p=3070 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 22:39:10,430 p=3070 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 22:39:10,543 p=3070 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:39:11,578 p=3070 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:39:11,578 p=3070 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:39:11,586 p=3070 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 22:39:11,613 p=3070 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 22:39:11,619 p=3070 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 22:39:11,636 p=3070 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 22:39:11,644 p=3070 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 22:39:11,990 p=3070 u=MoralesSantiago n=ansible | changed: [localhost] => (item=alumno)
+2026-06-24 22:39:12,174 p=3070 u=MoralesSantiago n=ansible | changed: [localhost] => (item=equipo)
+2026-06-24 22:39:12,183 p=3070 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 22:39:13,116 p=3070 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:39:13,123 p=3070 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 22:39:13,499 p=3070 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:39:13,508 p=3070 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group {{ GRUPO_2PSupervisores }}] ************************************************
+2026-06-24 22:39:13,524 p=3070 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable.. 'GRUPO_2PSupervisores' is undefined\n\nThe error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 25, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: \"add NOPASSWD in sudores for group {{ GRUPO_2PSupervisores }}\"\n  ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes. Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n"}
+2026-06-24 22:39:13,526 p=3070 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 22:39:13,526 p=3070 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:39:13,527 p=3070 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 22:45:04,961 p=3312 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:45:05,094 p=3312 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 22:45:05,102 p=3312 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 22:45:05,254 p=3312 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:45:06,240 p=3312 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:45:06,241 p=3312 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:45:06,248 p=3312 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 22:45:06,272 p=3312 u=MoralesSantiago n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  could not find expected ':'. while scanning a simple key
+  in "<unicode string>", line 25, column 1
+could not find expected ':'
+  in "<unicode string>", line 27, column 1
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 27, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: "add NOPASSWD in sudores for group {{ GRUPO_ADMIN }}"
+^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2026-06-24 22:48:35,388 p=3441 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:48:35,520 p=3441 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 22:48:35,528 p=3441 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 22:48:35,634 p=3441 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:48:36,681 p=3441 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:48:36,681 p=3441 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:48:36,688 p=3441 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 22:48:36,710 p=3441 u=MoralesSantiago n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context. mapping values are not allowed in this context
+  in "<unicode string>", line 5, column 8
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 5, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- debug:
+       ^ here
+
+2026-06-24 22:53:50,781 p=3568 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 22:53:50,906 p=3568 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 22:53:50,913 p=3568 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 22:53:51,071 p=3568 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 22:53:52,037 p=3568 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 22:53:52,037 p=3568 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 22:53:52,044 p=3568 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 22:53:52,065 p=3568 u=MoralesSantiago n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator. while parsing a block collection
+  in "<unicode string>", line 4, column 1
+did not find expected '-' indicator
+  in "<unicode string>", line 25, column 1
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 25, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+GRUPO_ADMIN: 2PSupervisores
+^ here
+
+2026-06-24 23:01:25,614 p=3686 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:01:25,742 p=3686 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:01:25,750 p=3686 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:01:25,859 p=3686 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:01:26,864 p=3686 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:01:26,865 p=3686 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:01:26,872 p=3686 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:01:26,896 p=3686 u=MoralesSantiago n=ansible | ERROR! this task 'GRUPO_ADMIN' has extra params, which is only allowed in the following modules: raw, ansible.windows.win_command, ansible.builtin.shell, ansible.builtin.include_tasks, ansible.builtin.raw, ansible.legacy.include, ansible.builtin.set_fact, win_shell, ansible.builtin.import_role, import_tasks, command, include_tasks, ansible.legacy.add_host, ansible.legacy.group_by, ansible.builtin.include, import_role, script, ansible.builtin.win_command, ansible.builtin.meta, ansible.builtin.command, ansible.windows.win_shell, add_host, ansible.builtin.group_by, include_vars, ansible.builtin.add_host, ansible.legacy.command, ansible.legacy.win_shell, set_fact, ansible.legacy.include_tasks, ansible.legacy.include_vars, ansible.builtin.import_tasks, include_role, shell, ansible.legacy.import_tasks, ansible.legacy.set_fact, meta, ansible.legacy.include_role, ansible.builtin.script, ansible.legacy.raw, win_command, ansible.builtin.include_vars, group_by, include, ansible.builtin.win_shell, ansible.legacy.script, ansible.legacy.meta, ansible.legacy.shell, ansible.legacy.import_role, ansible.legacy.win_command, ansible.builtin.include_role
+
+The error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 25, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- GRUPO_ADMIN: 2PSupervisores
+  ^ here
+
+2026-06-24 23:18:57,108 p=3795 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:18:57,237 p=3795 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:18:57,245 p=3795 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:18:57,355 p=3795 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:18:58,377 p=3795 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:18:58,377 p=3795 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:18:58,384 p=3795 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:18:58,411 p=3795 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 23:18:58,417 p=3795 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 23:18:58,433 p=3795 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 23:18:58,441 p=3795 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 23:18:58,765 p=3795 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 23:18:58,941 p=3795 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 23:18:58,950 p=3795 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:18:59,432 p=3795 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:18:59,438 p=3795 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:18:59,803 p=3795 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:18:59,811 p=3795 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group {{ 2PSupervisores }}] ******************************************************
+2026-06-24 23:18:59,825 p=3795 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'PSupervisores'. String: add NOPASSWD in sudores for group {{ 2PSupervisores }}. expected token 'end of print statement', got 'PSupervisores'"}
+2026-06-24 23:18:59,827 p=3795 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 23:18:59,827 p=3795 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:18:59,827 p=3795 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:22:03,758 p=4020 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:22:03,882 p=4020 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:22:03,890 p=4020 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:22:03,996 p=4020 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:22:05,013 p=4020 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:22:05,013 p=4020 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:22:05,021 p=4020 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:22:05,047 p=4020 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 23:22:05,054 p=4020 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 23:22:05,070 p=4020 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 23:22:05,077 p=4020 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 23:22:05,401 p=4020 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 23:22:05,583 p=4020 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 23:22:05,591 p=4020 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:22:06,064 p=4020 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:22:06,073 p=4020 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:22:06,440 p=4020 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:22:06,449 p=4020 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group {{ GRUPO_2PSupervisores }}] ************************************************
+2026-06-24 23:22:06,464 p=4020 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable.. 'GRUPO_2PSupervisores' is undefined\n\nThe error appears to be in '/home/MoralesSantiago/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 28, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: \"add NOPASSWD in sudores for group {{ GRUPO_2PSupervisores }}\"\n  ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes. Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n"}
+2026-06-24 23:22:06,465 p=4020 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 23:22:06,466 p=4020 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:22:06,466 p=4020 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:23:29,108 p=4243 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:23:29,237 p=4243 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:23:29,244 p=4243 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:23:29,354 p=4243 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:23:30,359 p=4243 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:23:30,359 p=4243 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:23:30,367 p=4243 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:23:30,394 p=4243 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 23:23:30,400 p=4243 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 23:23:30,416 p=4243 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 23:23:30,423 p=4243 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 23:23:30,745 p=4243 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 23:23:30,917 p=4243 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 23:23:30,928 p=4243 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:23:31,414 p=4243 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:23:31,421 p=4243 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:23:31,787 p=4243 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:23:31,794 p=4243 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group 2PSupervisores] ************************************************************
+2026-06-24 23:23:31,810 p=4243 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'PSupervisores'. String: ^%{{ 2PSupervisores }}. expected token 'end of print statement', got 'PSupervisores'"}
+2026-06-24 23:23:31,811 p=4243 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 23:23:31,812 p=4243 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:23:31,812 p=4243 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:26:10,314 p=4474 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:26:10,445 p=4474 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:26:10,453 p=4474 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:26:10,557 p=4474 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:26:11,580 p=4474 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:26:11,580 p=4474 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:26:11,587 p=4474 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:26:11,617 p=4474 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 23:26:11,623 p=4474 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 23:26:11,639 p=4474 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 23:26:11,646 p=4474 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 23:26:11,971 p=4474 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 23:26:12,152 p=4474 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 23:26:12,160 p=4474 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:26:12,645 p=4474 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:26:12,651 p=4474 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:26:13,018 p=4474 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:26:13,025 p=4474 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group 2PSupervisores] ************************************************************
+2026-06-24 23:26:13,804 p=4474 u=MoralesSantiago n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "failed to validate: rc:1 error:/home/MoralesSantiago/.ansible/tmp/ansible-tmp-1782343573.0421097-4694-140780280382460/tmpb3fcme1u:55:1: empty group\n% 2PSupervisores  ALL=(ALL) NOPASSWD: ALL\n^\n"}
+2026-06-24 23:26:13,806 p=4474 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 23:26:13,806 p=4474 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:26:13,807 p=4474 u=MoralesSantiago n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:27:39,128 p=4725 u=MoralesSantiago n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-24 23:27:39,257 p=4725 u=MoralesSantiago n=ansible | PLAY [all] ***********************************************************************************************************************
+2026-06-24 23:27:39,265 p=4725 u=MoralesSantiago n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2026-06-24 23:27:39,376 p=4725 u=MoralesSantiago n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nMoralesSantiago@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-24 23:27:40,378 p=4725 u=MoralesSantiago n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-24 23:27:40,378 p=4725 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:27:40,385 p=4725 u=MoralesSantiago n=ansible | TASK [include_role : 2do_parcial] ************************************************************************************************
+2026-06-24 23:27:40,413 p=4725 u=MoralesSantiago n=ansible | included: 2do_parcial for localhost
+2026-06-24 23:27:40,419 p=4725 u=MoralesSantiago n=ansible | TASK [2do_parcial : debug] *******************************************************************************************************
+2026-06-24 23:27:40,435 p=4725 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2026-06-24 23:27:40,442 p=4725 u=MoralesSantiago n=ansible | TASK [2do_parcial : Crear directorios en /tmp/multi_Pruebas_borrame/] ************************************************************
+2026-06-24 23:27:40,756 p=4725 u=MoralesSantiago n=ansible | ok: [localhost] => (item=alumno)
+2026-06-24 23:27:40,935 p=4725 u=MoralesSantiago n=ansible | ok: [localhost] => (item=equipo)
+2026-06-24 23:27:40,942 p=4725 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:27:41,423 p=4725 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:27:41,430 p=4725 u=MoralesSantiago n=ansible | TASK [2do_parcial : Agrego archivo desde template] *******************************************************************************
+2026-06-24 23:27:41,796 p=4725 u=MoralesSantiago n=ansible | ok: [localhost]
+2026-06-24 23:27:41,803 p=4725 u=MoralesSantiago n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group 2PSupervisores] ************************************************************
+2026-06-24 23:27:42,127 p=4725 u=MoralesSantiago n=ansible | changed: [localhost]
+2026-06-24 23:27:42,139 p=4725 u=MoralesSantiago n=ansible | TASK [Otra tarea] ****************************************************************************************************************
+2026-06-24 23:27:42,154 p=4725 u=MoralesSantiago n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-24 23:27:42,156 p=4725 u=MoralesSantiago n=ansible | PLAY RECAP ***********************************************************************************************************************
+2026-06-24 23:27:42,156 p=4725 u=MoralesSantiago n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-24 23:27:42,156 p=4725 u=MoralesSantiago n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
